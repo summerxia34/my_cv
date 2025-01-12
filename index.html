@@ -1,36 +1,47 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>赵志龙的个人简介</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>XIA Jia-xin (夏家馨) - CV</title>
   <style>
-    /* 全局样式 */
+    /* 
+      ------------------------
+      整体样式：浅蓝色基调
+      ------------------------
+    */
     body {
       font-family: 'PingFang SC', 'Segoe UI', Tahoma, sans-serif;
-      background-color: #f0f2f5;
+      background-color: #eaf6ff; /* 浅蓝背景 */
       color: #333;
       margin: 0;
       padding: 0;
     }
 
-    /* 顶部色块 */
+    /* 
+      ------------------------
+      顶部色块
+      ------------------------
+    */
     .header {
-      background-color: #0056b3;
+      background-color: #4a90e2; /* 主色：更鲜明的浅蓝 */
       color: white;
       text-align: center;
       padding: 30px;
     }
-
     .header h1 {
       margin: 0;
       font-size: 3em;
       font-weight: bold;
     }
 
-    /* 内容容器 */
+    /* 
+      ------------------------
+      内容容器
+      ------------------------
+    */
     .container {
-      max-width: 900px;
+      max-width: 920px;
       margin: 50px auto;
       background-color: white;
       padding: 30px;
@@ -38,71 +49,116 @@
       border-radius: 10px;
     }
 
-    /* 段落样式 */
-    p {
+    /* 
+      ------------------------
+      顶部简介
+      ------------------------
+    */
+    .intro {
       font-size: 1.2em;
-      line-height: 1.8;
-      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    .intro p {
+      margin: 10px 0;
     }
 
-    /* 小色块标题 */
+    /* 
+      ------------------------
+      小色块标题
+      ------------------------
+    */
     .section-title {
       font-size: 1.8em;
-      color: #0056b3;
+      color: #004b8b;            /* 标题文字：深些的蓝，用于对比 */
       margin-top: 40px;
-      border-left: 10px solid #0056b3;
-      padding-left: 10px;
-      background-color: #f0f2f5;
+      border-left: 10px solid #4a90e2; /* 左竖线用主色 */
+      background-color: #dbeeff;       /* 标题区的浅蓝色块 */
       padding: 10px;
       border-radius: 5px;
     }
 
-    /* 列表样式 */
+    /* 
+      ------------------------
+      段落、列表样式
+      ------------------------
+    */
+    p {
+      font-size: 1.1em;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
     ul {
       margin-top: 15px;
       padding-left: 40px;
       list-style-type: disc;
     }
-
     ul li {
-      margin-bottom: 15px;
+      margin-bottom: 10px;
       font-size: 1.1em;
+      line-height: 1.6;
     }
 
-    /* 按钮样式 */
-    .contact-btn {
-      display: inline-block;
-      width: 220px;
-      margin-top: 20px;
-      padding: 12px;
-      text-align: center;
-      background-color: #0056b3;
-      color: white;
-      text-decoration: none;
-      font-size: 1.2em;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
+    /*
+      ------------------------
+      分数+条形图：布局与样式
+      ------------------------
+    */
+    .score-list {
+      list-style-type: none;
+      padding-left: 0;
+      margin-top: 10px;
+    }
+    .score-list li {
+      display: flex; 
+      align-items: center; 
+      margin-bottom: 8px; 
+      flex-wrap: wrap;
+    }
+    .score-text {
+      margin-right: 15px; 
     }
 
-    .contact-btn:hover {
-      background-color: #003d82;
+    /* 
+      ------------------------
+      条形图容器与进度条
+      ------------------------
+    */
+    .bar-container {
+      background-color: #eee;
+      border-radius: 10px;
+      width: 180px;
+      height: 20px;
+      position: relative;
+    }
+    .bar-fill {
+      background-color: #4a90e2; /* 和顶部同色，统一视觉 */
+      height: 100%;
+      border-radius: 10px;
+      width: 0;
+      transition: width 0.5s ease;
+    }
+    .bar-label {
+      position: absolute;
+      top: 0; 
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fff;
+      font-size: 0.85em;
+      line-height: 20px;
+      font-weight: bold;
     }
 
-    /* 联系信息样式 */
-    .contact-info {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 1.2em;
-    }
-
-    /* 底部色块 */
+    /* 
+      ------------------------
+      底部色块
+      ------------------------
+    */
     .footer {
-      background-color: #f0f2f5;
+      background-color: #dbeeff; /* 可与标题色相同或更浅 */
       padding: 20px;
       text-align: center;
       margin-top: 50px;
     }
-
     .footer p {
       margin: 0;
       color: #666;
@@ -112,59 +168,309 @@
 <body>
   <!-- 顶部色块 -->
   <div class="header">
-    <h1>赵志龙</h1>
-    <p>澳门大学博士，华南理工大学新闻与传播学院博士后</p>
+    <h1>XIA Jia-xin (夏家馨)</h1>
+    <p>Phone: (+86) 131-9791-8839 &nbsp;|&nbsp; Email: 
+      <a style="color: #fff; text-decoration: underline;" 
+         href="mailto:summerxia0304@gmail.com">summerxia0304@gmail.com</a>
+    </p>
   </div>
 
   <!-- 内容容器 -->
   <div class="container">
-    <p>主要研究方向为智能与计算传播、健康传播、国际传播。</p>
-
-    <div class="section-title">研究成果</div>
-    <p>研究成果发表在《Health Communication》、《Journal of Family Violence》、《新闻大学》等期刊。</p>
-    <p>参与多项国际和国内健康传播调查项目，并在ICA和AEJMC等学术会议做主题报告。</p>
-
-    <div class="section-title">期刊论文</div>
-    <ul>
-      <li>Parental Mediation, Digital Media Usage, and Health Literacy: An Exploration Among Chinese Elementary School Students. Health Communication, 2024, 1–13. https://doi.org/10.1080/10410236.2024.2387389（SSCI Q1）</li>
-      <li>"Private Dispute or Public Responsibility?" - Newspaper Framing of Domestic Violence in Four Chinese Regions. Journal of Family Violence, 2024, In pressing. (SSCI Q1)</li>
-      <li>First-Person Influences on Third-Person Perceptions. China Media Research, 2023, 19(4), 1-28. (Excellence Research Australia)</li>
-      <li>影响估差：京湘新闻人中的第三者效应和第一者因素。新闻大学，2020,（6），63-81+124。（CSSCI）</li>
-    </ul>
-
-    <div class="section-title">学术报告</div>
-    <ul>
-      <li>Parental mediation, digital media usage, and health literacy: An exploration among Chinese elementary school students. Paper presented at the 107th annual conference of the Association for Education in Journalism and Mass Communication (AEJMC), 2024, Philadelphia, PA.</li>
-      <li>First-person influences on third-person perceptions. Paper presented at the 72nd annual conference of the International Communication Association (ICA), 2022, Paris, France.</li>
-      <li>Is Negative Representation More Engaging? The Influence of News Title Framing of Older Adults on Viewer Behavior. 智能与计算传播学2024年年会。2024, 浙江工业大学，杭州，中国。</li>
-      <li>智能舆情监测在“一国两制”话语建构中的应用研究：基于香港报业的分析. 智能与计算传播学2024年年会。2024粤港澳大湾区国际传播发展论坛。2024, 华南理工大学，广州，中国。</li>
-      <li>澳门居民媒体使用与国族认同间的相关关系模型。首届粤港澳湾区中国文化传播论坛。2021, 暨南大学，广州，中国。</li>
-    </ul>
-
-    <div class="section-title">参与项目</div>
-    <ul>
-      <li>COMET-19心理健康与媒介使用跨国调查。</li>
-      <li>澳门居民媒介使用研究（2008-2021），澳门大学澳门研究中心主持。</li>
-      <li>澳门青年参与粤港澳大湾区意向调查（2020-2021）。</li>
-      <li>广东省中小学校健康教育现况调研（2022-2023）。</li>
-    </ul>
-
-    <div class="section-title">传媒实践经验</div>
-    <ul>
-      <li>独立运营的知识类自媒体频道获得Bilibili十万粉丝奖牌。在Bilibili、抖音、网易成功运营知识类自媒体频道，总粉丝量达40万。</li>
-      <li>2020年网易新闻签约作者，潜力创作者。</li>
-      <li>执导剧情短片《普快列车》入围2017年澳门国际电影节短片组。</li>
-    </ul>
-
-    <div class="contact-info">
-      <p>联系方式: zhaozhilong0628@scut.edu.cn</p>
-      <a href="mailto:zhaozhilong0628@scut.edu.cn" class="contact-btn">发送邮件</a>
+    <!-- 顶部简介 -->
+    <div class="intro">
+      <p><strong>Date of Birth:</strong> 04/03/1995 &nbsp;&nbsp; <strong>Nationality:</strong> Chinese</p>
     </div>
+
+    <!-- Research Interests -->
+    <div class="section-title">Research Interests</div>
+    <p>Media Effects, Media Usage and AI-Enhanced Learning for Children and Adolescents, Fan-creator interactions on social media</p>
+
+    <!-- Education -->
+    <div class="section-title">Education</div>
+    <ul>
+      <li>
+        <strong>University of Macau</strong>, M.A. in Communication and New Media (2019–2022), GPA: 3.51/4.0  
+        <br>Thesis: <em>Analysis of “China’s Patreon” Afidan: Exploring Independent Creators on a Crowdfunding Platform</em> (Grade: Excellent).  
+        <br>Thesis Supervisor: Todd Sandel  
+        <br>Academic Writing and Scholarship (Grade: A)
+      </li>
+      <li>
+        <strong>Communication University of China</strong>, Dual B.A. in Broadcasting and Television Directing (2014–2017), GPA: 83.6/100
+        <ul class="score-list">
+          <li>
+            <span class="score-text">Live Theory and Practice (Grade: 90/100)</span>
+            <div class="bar-container">
+              <div class="bar-fill" style="width:90%;">
+                <div class="bar-label">90%</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="score-text">Photographic Composition (Grade: 90/100)</span>
+            <div class="bar-container">
+              <div class="bar-fill" style="width:90%;">
+                <div class="bar-label">90%</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="score-text">New Media Editing (Grade: 92/100)</span>
+            <div class="bar-container">
+              <div class="bar-fill" style="width:92%;">
+                <div class="bar-label">92%</div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Shih Hsin University</strong>, Public Relations and Advertising Exchange Program (September 2015 – January 2016)
+        <ul class="score-list">
+          <li>
+            <span class="score-text">Interactive Advertising (Grade: 93/100)</span>
+            <div class="bar-container">
+              <div class="bar-fill" style="width:93%;">
+                <div class="bar-label">93%</div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Jiangxi Normal University</strong>, B.A. in Advertising (2013–2017), GPA: 85.2/100
+        <ul class="score-list">
+          <li>
+            <span class="score-text">Advertising Case Study (Grade: 93/100)</span>
+            <div class="bar-container">
+              <div class="bar-fill" style="width:93%;">
+                <div class="bar-label">93%</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="score-text">Introduction to New Media (Grade: 94/100)</span>
+            <div class="bar-container">
+              <div class="bar-fill" style="width:94%;">
+                <div class="bar-label">94%</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="score-text">Public Relations (Grade: 94/100)</span>
+            <div class="bar-container">
+              <div class="bar-fill" style="width:94%;">
+                <div class="bar-label">94%</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="score-text">Integrated Marketing Communications (Grade: 94/100)</span>
+            <div class="bar-container">
+              <div class="bar-fill" style="width:94%;">
+                <div class="bar-label">94%</div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>New York–Boston University</strong>, Study Abroad Program (July 2008 – August 2008)
+      </li>
+    </ul>
+
+    <!-- Research Experience -->
+    <div class="section-title">Research Experience</div>
+    <ul>
+      <li>
+        Researcher, <em>Meizhou Rural Development Research Project</em> (Rural Cultural Revitalization: Realistic Dilemma, Path Choice, and Meizhou Exploration),  
+        Guangdong University of Foreign Studies (Mar 2020 – Sep 2020), supervised by Prof. Gu Xiaodong
+      </li>
+      <li>
+        Research Assistant, <em>Analysis of Supervised Machine Learning Project</em>,  
+        University of Macau (Dec 2019 – Jan 2020), supervised by Prof. Zhao Xinshu
+      </li>
+      <li>
+        Research Assistant, <em>Electric Cars and Sustainable Economy Project</em>,  
+        University of Macau (Oct 2019 – Jun 2020), supervised by Prof. Lin Weiwei
+      </li>
+      <li>
+        Research Assistant, <em>Negotiating Identity and Community on Social Media Project</em>,  
+        University of Macau (Jan 2022 – May 2022), supervised by Prof. Todd Sandel
+      </li>
+    </ul>
+
+    <!-- On-Campus Work Experience -->
+    <div class="section-title">On-Campus Work Experience</div>
+    <ul>
+      <li>
+        Teaching Assistant, Office of Department of Communication,  
+        University of Macau (Jan 2020 – Jun 2021)
+      </li>
+      <li>
+        Creative Media Lab, University of Macau (Jan 2020 – Jun 2021)
+      </li>
+    </ul>
+
+    <!-- Publications -->
+    <div class="section-title">Publications</div>
+    <ul>
+      <li>
+        Zhao, Z., Zhu, L., Liao, J., <strong>Xia, J.</strong>, &amp; Pu, X. (2024). 
+        <em>Parental Mediation, Digital Media Usage, and Health Literacy: An Exploration Among Chinese Elementary School Students.</em> 
+        Health Communication, 1–13. 
+        <a href="https://doi.org/10.1080/10410236.2024.2387389" target="_blank">https://doi.org/10.1080/10410236.2024.2387389</a>
+      </li>
+      <li>
+        <strong>Xia, J.</strong> (2020). Capsule Hotels in Japan: Living Experiences in an Ultra-modern “Non-Place” Field. 
+        <em>New Economy (新经济)</em> (09), 92-96. (In Chinese).
+      </li>
+      <li>
+        Gu Xiaodong, <strong>Xia Jiaxin</strong>, &amp; Li Hai. (2021). 
+        <em>Rural Cultural Revitalization: Realistic Dilemma, Path Choice and Meizhou Exploration.</em> 
+        Journal of Guangdong Radio &amp; Television University (01), 25-31. (In Chinese).
+      </li>
+    </ul>
+
+    <!-- Conference Publication -->
+    <div class="section-title">Conference Publication</div>
+    <ul>
+      <li>
+        Zhao, Z., Zhu, L., Liao, J., <strong>Xia, J.</strong>, &amp; Pu, X. (2024). 
+        <em>Parental Interactions, Media Consumption, and Health Literacy: An Exploration Among Chinese Elementary School Students.</em> 
+        Paper presented at the 2024 Association for Education in Journalism and Mass Communication (AEJMC) Annual Conference.
+      </li>
+      <li>
+        Zhao, Z., &amp; <strong>Xia, J.</strong>, (2024). 
+        <em>Is Negative Representation More Engaging? The Influence of News Title Framing of Older Adults on Viewer Behavior.</em> 
+        Paper presented at the 2024 Annual Conference on Intelligent and Computational Communication 
+        (智能与计算传播学2024年年会), Zhejiang University of Technology, Hangzhou, China.
+      </li>
+    </ul>
+
+    <!-- Book Chapter -->
+    <div class="section-title">Book Chapter</div>
+    <ul>
+      <li>
+        Gu Xiaodong, Xia Bin, <strong>Xia Jiaxin</strong>. (2019). 
+        <em>Optimization and Construction of Ecological Environment Protection Coordination Mechanism in the Guangdong-Hong Kong-Macao Bay Area.</em> 
+        In <strong>Guangdong-Hong Kong-Macao Greater Bay Area Development Research Report (2019-2020)</strong>, pp. 149-169. 
+        Sun Yat-sen University Press.
+      </li>
+    </ul>
+
+    <!-- Editorial Work -->
+    <div class="section-title">Editorial Work</div>
+    <ul>
+      <li>
+        Edited and compiled the book <em>Smart and Fun Mental Calculation (智趣口算)</em>, overseeing content planning and editing, published by Guangdong Education Publishing House (2024).
+      </li>
+      <li>
+        Edited and content-planned the book <em>Forging the Soul of Youth through Law: A Choice for the Future (法铸少年魂 青春的选择)</em>, published by Guangdong Education Publishing House (2024).
+      </li>
+    </ul>
+
+    <!-- Certifications & Qualifications -->
+    <div class="section-title">Certifications & Qualifications</div>
+    <ul>
+      <li>
+        Intermediate Qualification Certificate for National Publishing Professional Technicians,  
+        approved by the Ministry of Human Resources and Social Security of China and the National Press and Publication Administration.
+      </li>
+    </ul>
+
+    <!-- Professional Experience -->
+    <div class="section-title">Professional Experience</div>
+    <ul>
+      <li>
+        <strong>Editor</strong>, Guangdong Education Publishing House (07/2022 – Present)  
+        <ul>
+          <li>Platform Operations for a million-user-scale platform (<a href="http://www.nfclass.com" target="_blank">www.nfclass.com</a>): Course resource integration, eBook production, digital textbook development.</li>
+          <li>Strategic licensing of textbook copyrights &amp; partnerships (learning devices, various digital platforms).</li>
+          <li>Book editing &amp; publishing: strategic topic selection and content planning.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Senior Copywriter</strong>, RTD China (03/2018 – 07/2019)  
+        <ul>
+          <li>Developed promotional proposals for cultural &amp; creative industries, including high-profile clients such as Poly Group.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Project Planner</strong>, CYTS Expo (07/2017 – 01/2018)  
+        <ul>
+          <li>Planner of the 9th China Flower Exposition and the 2019 International Horticultural Exposition.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Copywriter Intern</strong>, Ogilvy &amp; Mather Shanghai (03/2017 – 07/2017)  
+        <ul>
+          <li>Contributed to marketing campaigns (e.g., Bright Dairy) by assisting in creative concepts and copywriting.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Brand Planning Intern</strong>, People’s Daily (08/2016 – 12/2016)  
+        <ul>
+          <li>Brand promotion and copywriting.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Curator Intern</strong>, Tree Art Museum (05/2016 – 07/2016)  
+        <ul>
+          <li>Served as executive curator for an ink painting artist exhibition.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Designer Intern</strong>, Guangdong Alpha Animation (01/2015 – 03/2015)  
+        <ul>
+          <li>Package design using Adobe Illustrator.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- Honor & Awards -->
+    <div class="section-title">Honor & Awards</div>
+    <ul>
+      <li>Third Award in the New Media Marketing Skills Competition, Guangdong Publishing Group (12/2024)</li>
+      <li>Excellent Award in Guangdong Education Publishing House Youth Editor Competition (12/2023)</li>
+      <li>Top 10 AIGC Applications in Education Publishing (12/2023)</li>
+      <li>Excellent Staff of the 9th China Flower Exposition (10/2017)</li>
+      <li>Excellent Award in Graphic Design, the 13th Academy Award of Advertising Festival of Chinese College Students (05/2015)</li>
+    </ul>
+
+    <!-- Language Skills -->
+    <div class="section-title">Language Skills</div>
+    <ul>
+      <li><strong>Chinese</strong>: Native Speaker</li>
+      <li><strong>English</strong>: IELTS Overall 7.0 (07/2021)</li>
+    </ul>
+
+    <!-- Related Skills -->
+    <div class="section-title">Related Skills</div>
+    <ul>
+      <li>
+        <strong>Research Skills:</strong> Conducting interviews, content analysis, data visualization &amp; interpretation, critical literature review.
+      </li>
+      <li>
+        <strong>Writing &amp; Editing:</strong> Two years as a copywriter and two years as an editor in a publishing house.
+      </li>
+      <li>
+        <strong>Photography:</strong> Passion for travel photography.  
+        <br>Personal photography site: 
+        <a href="https://summerxia0304.wixsite.com/photohgraphy" target="_blank">https://summerxia0304.wixsite.com/photohgraphy</a>
+      </li>
+      <li>
+        <strong>Video Production:</strong> Participated in the 2017 Shanghai Theatre Academy graduation program production.
+      </li>
+      <li>
+        <strong>UI Design &amp; Product Operation:</strong> Designed and operated educational websites and WeChat mini-programs.
+      </li>
+    </ul>
   </div>
 
   <!-- 底部色块 -->
   <div class="footer">
-    <p>© 2024 赵志龙 - 所有权利保留</p>
+    <p>© 2025 XIA Jia-xin - All rights reserved.</p>
   </div>
 </body>
 </html>
